@@ -1,0 +1,261 @@
+.solicitudes-profesor {
+  margin-bottom: 3rem;
+}
+
+.solicitudes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+.solicitud-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.solicitud-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.solicitud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.solicitud-header h4 {
+  margin: 0;
+  color: #05424d;
+  font-size: 1.1rem;
+}
+
+.fecha {
+  font-size: 0.85rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+
+.solicitud-info {
+  margin-bottom: 1.5rem;
+}
+
+.solicitud-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.solicitud-info strong {
+  color: #05424d;
+}
+
+.solicitud-acciones {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.aceptar-btn, .rechazar-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  min-width: 100px;
+}
+
+.aceptar-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.aceptar-btn:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+.rechazar-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.rechazar-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.ver-comprobante-btn {
+  background: linear-gradient(135deg, #7c4dff 0%, #9c27b0 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+  box-shadow: 0 3px 10px rgba(124, 77, 255, 0.3);
+}
+
+.ver-comprobante-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 77, 255, 0.4);
+  background: linear-gradient(135deg, #6d3dff 0%, #8e24aa 100%);
+}
+
+.imagen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.imagen-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.imagen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.imagen-header h3 {
+  margin: 0;
+  color: #05424d;
+}
+
+.cerrar-imagen {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.cerrar-imagen:hover {
+  background: #e2e8f0;
+  color: #05424d;
+}
+
+.imagen-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.imagen-body img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.no-solicitudes {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #64748b;
+}
+
+.no-solicitudes i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.no-solicitudes p {
+  font-size: 1.1rem;
+}
+
+body.dark-mode .solicitud-card {
+  background: #2d2d2d;
+}
+
+
+
+body.dark-mode .solicitud-header h4 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .fecha {
+  background: #3d3d3d;
+  color: #b0b0b0;
+}
+
+body.dark-mode .solicitud-info strong {
+  color: #7c4dff;
+}
+
+body.dark-mode .solicitud-info p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .no-solicitudes {
+  color: #b0b0b0;
+}
+
+body.dark-mode .no-solicitudes i {
+  color: #555;
+}
+
+body.dark-mode .ver-comprobante-btn {
+  background: linear-gradient(135deg, #7c4dff 0%, #9c27b0 100%);
+}
+
+body.dark-mode .ver-comprobante-btn:hover {
+  box-shadow: 0 4px 12px rgba(124, 77, 255, 0.3);
+}
+
+body.dark-mode .imagen-content {
+  background: #2d2d2d;
+}
+
+body.dark-mode .imagen-header {
+  background: #3d3d3d;
+  border-bottom-color: #555;
+}
+
+body.dark-mode .imagen-header h3 {
+  color: #7c4dff;
+}
+
+body.dark-mode .cerrar-imagen {
+  color: #b0b0b0;
+}
+
+body.dark-mode .cerrar-imagen:hover {
+  background: #555;
+  color: #7c4dff;
+}

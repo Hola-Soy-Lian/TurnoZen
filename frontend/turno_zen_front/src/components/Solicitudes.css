@@ -1,0 +1,671 @@
+.solicitudes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 80vh;
+  display: grid;
+  gap: 2rem;
+}
+
+.solicitudes-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.solicitudes-header h2 {
+  font-size: 2.5rem;
+  color: #05424d;
+  margin-bottom: 0.5rem;
+}
+
+.solicitudes-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.buscar-section,
+.solicitudes-section,
+.contactos-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.buscar-section h3,
+.solicitudes-section h3,
+.contactos-section h3 {
+  color: #05424d;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.buscar-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.buscar-form input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.buscar-form input:focus {
+  outline: none;
+  border-color: #05424d;
+  box-shadow: 0 0 0 3px rgba(5, 66, 77, 0.1);
+}
+
+.buscar-btn {
+  background: linear-gradient(135deg, #05424d, #36a8ca);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buscar-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(5, 66, 77, 0.3);
+}
+
+.usuarios-encontrados h4 {
+  color: #05424d;
+  margin-bottom: 15px;
+}
+
+.usuario-card,
+.solicitud-card,
+.contacto-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.usuario-card:hover,
+.solicitud-card:hover,
+.contacto-card:hover {
+  transform: translateY(-2px);
+}
+
+.usuario-info,
+.solicitud-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #05424d, #36a8ca);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.usuario-info h4,
+.solicitud-info h4 {
+  margin: 0 0 5px 0;
+  color: #05424d;
+}
+
+.usuario-info p,
+.solicitud-info p {
+  margin: 0 0 5px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.tipo-badge {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.tipo-badge.alumno {
+  background: #05424d;
+}
+
+.tipo-badge.profesor {
+  background: #36a8ca;
+}
+
+.solicitar-btn {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.solicitar-btn:hover {
+  background: linear-gradient(135deg, #229954, #1e8449);
+  transform: translateY(-2px);
+}
+
+.solicitud-acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.aceptar-btn {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.aceptar-btn:hover {
+  background: linear-gradient(135deg, #229954, #1e8449);
+}
+
+.rechazar-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rechazar-btn:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+}
+
+.fecha {
+  font-size: 0.8rem !important;
+  color: #999 !important;
+}
+
+.contactos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.contacto-info {
+  flex: 1;
+}
+
+.contacto-info h4 {
+  color: #05424d;
+  margin: 0 0 5px 0;
+}
+
+.contacto-info p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.no-solicitudes,
+.no-contactos {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 40px;
+}
+
+.no-solicitudes i,
+.no-contactos i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+  display: block;
+}
+
+/* Tema oscuro */
+body.dark-mode .solicitudes-header h2 {
+  color: #7c4dff;
+}
+
+body.dark-mode .solicitudes-header p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .buscar-section,
+body.dark-mode .solicitudes-section,
+body.dark-mode .contactos-section {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+body.dark-mode .buscar-section h3,
+body.dark-mode .solicitudes-section h3,
+body.dark-mode .contactos-section h3 {
+  color: #7c4dff;
+}
+
+body.dark-mode .buscar-form input {
+  background-color: #3d3d3d;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+body.dark-mode .buscar-form input::placeholder {
+  color: rgba(224, 224, 224, 0.6);
+}
+
+body.dark-mode .buscar-form input:focus {
+  border-color: #7c4dff;
+  box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.2);
+}
+
+body.dark-mode .buscar-btn {
+  background: linear-gradient(135deg, #4a2c5a 0%, #7c4dff 100%);
+}
+
+body.dark-mode .usuario-card,
+body.dark-mode .solicitud-card,
+body.dark-mode .contacto-card {
+  background-color: #3d3d3d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .usuario-info h4,
+body.dark-mode .solicitud-info h4,
+body.dark-mode .contacto-info h4 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .usuario-info p,
+body.dark-mode .solicitud-info p,
+body.dark-mode .contacto-info p {
+  color: rgba(224, 224, 224, 0.8);
+}
+
+body.dark-mode .fecha {
+  color: rgba(224, 224, 224, 0.6) !important;
+}
+
+body.dark-mode .avatar {
+  background: linear-gradient(135deg, #4a2c5a 0%, #7c4dff 100%);
+}
+
+body.dark-mode .tipo-badge.alumno {
+  background: #7c4dff;
+}
+
+body.dark-mode .tipo-badge.profesor {
+  background: #4a2c5a;
+}
+
+body.dark-mode .no-solicitudes,
+body.dark-mode .no-contactos {
+  color: rgba(224, 224, 224, 0.8);
+}
+
+body.dark-mode .no-solicitudes i,
+body.dark-mode .no-contactos i {
+  color: #555;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #05424d;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideIn 0.3s ease;
+}
+
+body.dark-mode .notification {
+  background: #7c4dff;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.ver-perfil-btn {
+  background: linear-gradient(135deg, #05424d, #36a8ca);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.ver-perfil-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 66, 77, 0.3);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.perfil-modal {
+  background: white;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.perfil-header {
+  padding: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.avatar-grande {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #05424d, #36a8ca);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.perfil-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #05424d;
+  font-size: 1.5rem;
+}
+
+.perfil-info p {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cerrar-modal:hover {
+  background: #f1f5f9;
+  color: #05424d;
+}
+
+.perfil-detalles {
+  padding: 2rem;
+}
+
+.detalle-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.detalle-item i {
+  color: #05424d;
+  width: 20px;
+  text-align: center;
+}
+
+.detalle-item span {
+  color: #333;
+  flex: 1;
+}
+
+body.dark-mode .ver-perfil-btn {
+  background: linear-gradient(135deg, #4a2c5a 0%, #7c4dff 100%);
+}
+
+body.dark-mode .perfil-modal {
+  background: #2d2d2d;
+  color: #e0e0e0;
+}
+
+body.dark-mode .perfil-header {
+  border-bottom-color: #444;
+}
+
+body.dark-mode .avatar-grande {
+  background: linear-gradient(135deg, #4a2c5a 0%, #7c4dff 100%);
+}
+
+body.dark-mode .perfil-info h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .perfil-info p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .cerrar-modal {
+  color: #b0b0b0;
+}
+
+body.dark-mode .cerrar-modal:hover {
+  background: #3d3d3d;
+  color: #7c4dff;
+}
+
+body.dark-mode .detalle-item {
+  background: #3d3d3d;
+}
+
+body.dark-mode .detalle-item i {
+  color: #7c4dff;
+}
+
+body.dark-mode .detalle-item span {
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .solicitudes-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .buscar-form {
+    flex-direction: column;
+  }
+  
+  .usuario-card,
+  .solicitud-card,
+  .contacto-card {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .solicitud-acciones {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .contactos-lista {
+    grid-template-columns: 1fr;
+  }
+  
+  .perfil-modal {
+    width: 95%;
+    margin: 1rem;
+  }
+  
+  .perfil-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .cerrar-modal {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+.info-text {
+  margin-left: 1rem;
+}
+
+.perfil-modal {
+  margin-top: 3rem;
+}
+
+.perfil-layout {
+  display: flex;
+  gap: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.perfil-izquierda {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  min-height: 400px;
+  border-radius: 10px 0 0 10px;
+}
+
+.perfil-derecha {
+  flex: 1;
+  min-height: 400px;
+  padding: 1.5rem;
+  border-radius: 0 10px 10px 0;
+}
+
+.perfil-derecha h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #05424d;
+}
+
+.clases-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.clase-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #36a8ca;
+}
+
+.clase-item i {
+  color: #05424d;
+}
+
+body.dark-mode .perfil-derecha h4 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .clase-item {
+  background: #3d3d3d;
+  border-left-color: #7c4dff;
+}
+
+body.dark-mode .clase-item i {
+  color: #000 !important;
+}
+
+.clase-item i {
+  color: #000 !important;
+}
+
+body.dark-mode .perfil-izquierda {
+  background: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,332 @@
+/* Scroll suave para toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  transition: all 0.5s ease;
+}
+
+/* Animaciones globales para cambio de tema */
+* {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.course-card,
+.turno-card,
+.perfil-header,
+.perfil-content,
+.modal-content,
+.muro-content,
+.gestion-profesor-container > div {
+  transition: all 0.5s ease;
+}
+
+.reserve-btn,
+.login-button,
+.submit-btn,
+.edit-btn,
+.save-btn,
+.crear-clase-btn,
+.aceptar-btn,
+.ver-muro-btn,
+.confirm-btn,
+.filter-btn {
+  transition: all 0.3s ease;
+}
+
+/* Tema oscuro */
+body.dark-mode {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+/* Contenedores principales */
+body.dark-mode .seccionPrincipal {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+body.dark-mode .courses-section {
+  background-color: transparent !important;
+}
+
+/* Tarjetas y contenedores */
+body.dark-mode .course-card,
+body.dark-mode .turno-card,
+body.dark-mode .perfil-header,
+body.dark-mode .perfil-content,
+body.dark-mode .gestion-profesor-container > div,
+body.dark-mode .solicitudes-section,
+body.dark-mode .turnos-confirmados-section,
+body.dark-mode .crear-clase-section,
+body.dark-mode .modal-content,
+body.dark-mode .muro-content,
+body.dark-mode .login-form {
+  background-color: #2d2d2d !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+
+/* Inputs y formularios */
+body.dark-mode .input-field,
+body.dark-mode .listLogin,
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea,
+body.dark-mode .horario-input input,
+body.dark-mode .horario-input select {
+  background-color: #3d3d3d !important;
+  color: #e0e0e0 !important;
+  border-color: #555 !important;
+}
+
+/* Textos y títulos */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode .courses-section h2,
+body.dark-mode .turnos-header h2,
+body.dark-mode .gestion-header h2,
+body.dark-mode .course-header h3,
+body.dark-mode .turno-header h3 {
+  color: #e0e0e0 !important;
+}
+
+/* Textos en áreas oscuras */
+body.dark-mode .description,
+body.dark-mode .instructor,
+body.dark-mode .detail span:not(.icon),
+body.dark-mode .turnos-header p,
+body.dark-mode .gestion-header p,
+body.dark-mode .value,
+body.dark-mode .solicitud-info p,
+body.dark-mode .turno-info p {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .label {
+  color: #e0e0e0 !important;
+}
+
+/* Botones principales */
+body.dark-mode .reserve-btn,
+body.dark-mode .login-button,
+body.dark-mode .submit-btn,
+body.dark-mode .edit-btn,
+body.dark-mode .save-btn,
+body.dark-mode .crear-clase-btn,
+body.dark-mode .aceptar-btn,
+body.dark-mode .ver-muro-btn,
+body.dark-mode .confirm-btn,
+body.dark-mode .botonPrimario {
+  background: linear-gradient(135deg, #4a2c5a 0%, #7c4dff 100%) !important;
+}
+
+/* Botones secundarios */
+body.dark-mode .botonSecundario {
+  border-color: #7c4dff !important;
+  color: #7c4dff !important;
+}
+
+body.dark-mode .botonSecundario:hover {
+  background: #7c4dff !important;
+  color: white !important;
+}
+
+/* Placeholders e imágenes de fondo */
+body.dark-mode .placeholderImagen {
+  background: linear-gradient(135deg, #4a2c5a 0%, #7c4dff 100%) !important;
+}
+
+/* Toggle description */
+body.dark-mode .toggle-description {
+  color: #7c4dff !important;
+}
+
+/* Filtros */
+body.dark-mode .filter-btn {
+  border-color: #7c4dff !important;
+  color: #7c4dff !important;
+}
+
+body.dark-mode .filter-btn.active,
+body.dark-mode .filter-btn:hover {
+  background: #7c4dff !important;
+  color: white !important;
+}
+
+/* Header - mantener el mismo color en ambos temas */
+
+/* Hero section */
+body.dark-mode .hero-text h2 {
+  color: #7c4dff !important;
+}
+
+/* Degradado debajo de la imagen principal */
+body.dark-mode .courses-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, #1a1a1a 0%, transparent 100%);
+  z-index: 1;
+}
+
+body.dark-mode .courses-section {
+  position: relative;
+}
+
+.courses-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, #f8fafc 0%, transparent 100%);
+  z-index: 1;
+}
+
+.courses-section {
+  position: relative;
+}
+
+.courses-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Estados y badges */
+body.dark-mode .estado-badge.pendiente {
+  background: #4a3c1a !important;
+  color: #e0c547 !important;
+}
+
+body.dark-mode .estado-badge.confirmado {
+  background: #1a4a2e !important;
+  color: #47e068 !important;
+}
+
+body.dark-mode .estado-badge.rechazado {
+  background: #4a1a1a !important;
+  color: #e04747 !important;
+}
+
+/* Info items */
+body.dark-mode .info-item {
+  background: #3d3d3d !important;
+  border-left-color: #7c4dff !important;
+}
+
+body.dark-mode .cupo-info,
+body.dark-mode .schedule li {
+  background: #3d3d3d !important;
+}
+
+/* Modal overlay */
+body.dark-mode .modal-overlay,
+body.dark-mode .muro-modal {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Mensajes */
+body.dark-mode .mensaje {
+  background: #3d3d3d !important;
+}
+
+body.dark-mode .mensaje.profesor {
+  background: #4a2c5a !important;
+  border-left-color: #7c4dff !important;
+}
+
+/* Footer */
+body.dark-mode .footer {
+  background: linear-gradient(135deg, #4a2c5a 0%, #7c4dff 100%) !important;
+}
+
+/* Iconos */
+body.dark-mode .detail .icon,
+body.dark-mode .cupo-info i {
+  color: #7c4dff !important;
+}
+
+/* Calendario tema oscuro */
+body.dark-mode .calendario-container {
+  background: #1a1a1a !important;
+}
+
+body.dark-mode .calendario-grid {
+  background: #2d2d2d !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark-mode .dias-semana {
+  background: linear-gradient(135deg, #7c4dff 0%, #9c27b0 100%) !important;
+}
+
+body.dark-mode .dia-semana {
+  color: white !important;
+}
+
+body.dark-mode .nav-btn {
+  background: linear-gradient(135deg, #7c4dff 0%, #9c27b0 100%) !important;
+  color: white !important;
+}
+
+body.dark-mode .dia {
+  background: #3d3d3d !important;
+  border-color: #555 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .dia.con-clases {
+  background: linear-gradient(135deg, #7c4dff20 0%, #9c27b020 100%) !important;
+  border-color: #7c4dff !important;
+}
+
+body.dark-mode .clase-item {
+  background: #7c4dff !important;
+  color: white !important;
+}
+
+body.dark-mode .punto-leyenda {
+  background: #7c4dff !important;
+}
+
+/* Badges de tipo usuario */
+body.dark-mode .tipo-badge {
+  background-color: #7c4dff !important;
+}
+
+/* Nuevas clases badge */
+body.dark-mode .nueva-clase-badge {
+  background: #7c4dff !important;
+}
+
+/* Logos y elementos de marca */
+body.dark-mode .logo-text h2 {
+  color: #7c4dff !important;
+}
+
+/* Botones de tema */
+body.dark-mode .theme-btn {
+  background: rgba(124, 77, 255, 0.2) !important;
+  border-color: rgba(124, 77, 255, 0.3) !important;
+}
+
+body.dark-mode .theme-btn:hover {
+  background: rgba(124, 77, 255, 0.3) !important;
+}
